@@ -1,22 +1,22 @@
 #!/usr/bin/env sh
-VER=v0.3.0
+VER=${1:-v0.4.1}
 DIR=~/Downloads
 MIRROR=https://github.com/buildpack/pack/releases/download/${VER}
 
 dl()
 {
-    OS=$1
-    ARCHIVETYPE=$2
-    FILE=pack-${VER}-${OS}.${ARCHIVETYPE}
-    URL=$MIRROR/$FILE
-    LFILE=$DIR/$FILE
-    if [ ! -e $LFILE ];
+    local os=$1
+    local archive_type=$2
+    local file=pack-${VER}-${os}.${archive_type}
+    local url=$MIRROR/$file
+    local lfile=$DIR/$file
+    if [ ! -e $lfile ];
     then
-        wget -q -O $LFILE $URL
+        wget -q -O $lfile $url
     fi
 
-    printf "    # %s\n" $URL
-    printf "    %s: sha256:%s\n" $OS $(sha256sum $LFILE | awk '{print $1}')
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $os $(sha256sum $lfile | awk '{print $1}')
 }
 
 printf "  %s:\n" $VER
