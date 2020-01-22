@@ -1,14 +1,14 @@
 #!/usr/bin/env sh
-VER=${1:-v0.4.1}
 DIR=~/Downloads
-MIRROR=https://github.com/buildpack/pack/releases/download/${VER}
+MIRROR=https://github.com/buildpack/pack/releases/download
 
 dl()
 {
-    local os=$1
-    local archive_type=$2
-    local file=pack-${VER}-${os}.${archive_type}
-    local url=$MIRROR/$file
+    local ver=$1
+    local os=$2
+    local archive_type=$3
+    local file=pack-${ver}-${os}.${archive_type}
+    local url=$MIRROR/$ver/$file
     local lfile=$DIR/$file
     if [ ! -e $lfile ];
     then
@@ -19,9 +19,13 @@ dl()
     printf "    %s: sha256:%s\n" $os $(sha256sum $lfile | awk '{print $1}')
 }
 
-printf "  %s:\n" $VER
-dl linux tgz
-dl windows zip
-dl macos tgz
+dl_ver() {
+    local ver=$1
+    printf "  %s:\n" $ver
+    dl $ver linux tgz
+    dl $ver windows zip
+    dl $ver macos tgz
+}
 
 
+dl_ver ${1:-v0.7.0}
