@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/buildpack/pack/releases/download
 
@@ -28,4 +29,4 @@ dl_ver() {
 }
 
 
-dl_ver ${1:-v0.7.0}
+dl_ver ${1:-v0.20.0}

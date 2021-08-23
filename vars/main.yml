@@ -1,6 +1,9 @@
 ---
 # vars file for pack
 pack_archive: pack-{{ pack_ver }}-{{ pack_os }}.{{ pack_archivetype }}
+pack_tmp_archive: /tmp/{{ pack_archive }}
 pack_url: '{{ pack_mirror }}/{{ pack_ver }}/{{ pack_archive }}'
 pack_checksum: '{{ pack_checksums[pack_ver][pack_os] }}'
 pack_install_dir: '{{ pack_parent_install_dir }}/pack-{{ pack_ver }}'
+pack_exe: '{{ pack_install_dir }}/pack'
+pack_link: '{{ pack_parent_install_dir }}/bin/pack'

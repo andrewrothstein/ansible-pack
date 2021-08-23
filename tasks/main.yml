@@ -9,48 +9,48 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for install
-  become: yes
+- name: check for install in {{ pack_install_dir }}
+  become: true
   stat:
     path: '{{ pack_install_dir }}'
   changed_when: False
   register: pack_binary
 - when: not pack_binary.stat.exists
   block:
-    - name: download
-      become: yes
+    - name: downloading {{ pack_url }}
+      become: true
       become_user: root
       get_url:
         url: '{{ pack_url }}'
-        dest: /tmp/{{ pack_archive }}
+        dest: '{{ pack_tmp_archive }}'
         mode: 0644
         checksum: '{{ pack_checksum }}'
-    - name: mkdir
-      become: yes
+    - name: mkdir {{ pack_install_dir }}
+      become: true
       become_user: root
       file:
         path: '{{ pack_install_dir }}'
         state: directory
         mode: 0755
-    - name: unarchive
-      become: yes
+    - name: unarchive {{ pack_tmp_archive }}
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
-        src: /tmp/{{ pack_archive }}
+        remote_src: true
+        src: '{{ pack_tmp_archive }}'
         dest: '{{ pack_install_dir }}'
-        creates: '{{ pack_install_dir }}/pack'
+        creates: '{{ pack_exe }}'
   always:
-    - name: cleanup
-      become: yes
+    - name: rm {{ pack_tmp_archive }}
+      become: true
       become_user: root
       file:
-        path: /tmp/{{ pack_archive }}
+        path: '{{ pack_tmp_archive }}'
         state: absent
-- name: link
-  become: yes
+- name: linking {{ pack_link }} to {{ pack_exe }}
+  become: true
   become_user: root
   file:
-    src: '{{ pack_install_dir }}/pack'
-    dest: '{{ pack_parent_install_dir }}/bin/pack'
+    src: '{{ pack_exe }}'
+    dest: '{{ pack_link }}'
     state: link

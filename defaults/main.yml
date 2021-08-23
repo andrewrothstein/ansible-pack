@@ -1,6 +1,6 @@
 ---
 # defaults file for pack
-pack_ver: v0.7.0
+pack_ver: v0.20.0
 pack_mirror: https://github.com/buildpack/pack/releases/download
 
 pack_os: linux
@@ -30,3 +30,10 @@ pack_checksums:
     windows: sha256:f90e59fd77d281597c36e4aef0d9ea423b9cb4dd715c7d7276be0af6263aa00d
     # https://github.com/buildpack/pack/releases/download/v0.7.0/pack-v0.7.0-macos.tgz
     macos: sha256:7d2ba6f6e0e376624e017edae3fb586294487a00ec4a147eee0dfe4e9e82afad
+  v0.20.0:
+    # https://github.com/buildpack/pack/releases/download/v0.20.0/pack-v0.20.0-linux.tgz
+    linux: sha256:1d879c8f99130b30e080153b1025ee51cfeddfb41612e5c257a89d3a358fc3c2
+    # https://github.com/buildpack/pack/releases/download/v0.20.0/pack-v0.20.0-windows.zip
+    windows: sha256:1b4bafd0de51a6475a691a90d241dd7c2aeedde2c8abaf18fc699406bb4e6d53
+    # https://github.com/buildpack/pack/releases/download/v0.20.0/pack-v0.20.0-macos.tgz
+    macos: sha256:5629e6b74d4ffe700285d71abd60db61b4deba628248a8148451cbbef3c10abb
