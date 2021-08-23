@@ -1,6 +1,6 @@
 <andrewrothstein.pack
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-pack.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-pack)
+![Build Status](https://github.com/andrewrothstein/ansible-pack/actions/workflows/build.yml/badge.svg)
 
 Installs the [pack](https://github.com/buildpack/pack) CLI from the buildpacks.io project
 
