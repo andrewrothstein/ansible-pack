@@ -1,6 +1,6 @@
 ---
 # defaults file for pack
-pack_ver: v0.20.0
+pack_ver: v0.24.0
 pack_mirror: https://github.com/buildpack/pack/releases/download
 
 pack_os: linux
@@ -37,3 +37,31 @@ pack_checksums:
     windows: sha256:1b4bafd0de51a6475a691a90d241dd7c2aeedde2c8abaf18fc699406bb4e6d53
     # https://github.com/buildpack/pack/releases/download/v0.20.0/pack-v0.20.0-macos.tgz
     macos: sha256:5629e6b74d4ffe700285d71abd60db61b4deba628248a8148451cbbef3c10abb
+  v0.21.0:
+    # https://github.com/buildpack/pack/releases/download/v0.21.0/pack-v0.21.0-linux.tgz
+    linux: sha256:c42744eabd291072fc445d1127fda8806e25b7e12a9ac4df54afa734f8c6cbb4
+    # https://github.com/buildpack/pack/releases/download/v0.21.0/pack-v0.21.0-windows.zip
+    windows: sha256:3505b141ecf2cd5fd4cc1211234e09afa3662806fda183c35358fac3da036285
+    # https://github.com/buildpack/pack/releases/download/v0.21.0/pack-v0.21.0-macos.tgz
+    macos: sha256:526c8f0fd51cbf15caeaa701c4b1e6be488449c99bcdbff8a01d130d7a85688f
+  v0.22.0:
+    # https://github.com/buildpack/pack/releases/download/v0.22.0/pack-v0.22.0-linux.tgz
+    linux: sha256:7bac2c2e0a504e82b7dd2896074a4bf4bca378e56ec31ee92944e46a09404ff4
+    # https://github.com/buildpack/pack/releases/download/v0.22.0/pack-v0.22.0-windows.zip
+    windows: sha256:31dfa82f80aa0642a05fa1753da389f3f6aeaeb6e8500ef19177628a461ad74f
+    # https://github.com/buildpack/pack/releases/download/v0.22.0/pack-v0.22.0-macos.tgz
+    macos: sha256:2318f683f6b5e3b45c32e302caf1eb4b3111c52f8450fc4d36cf7ffc39e76f41
+  v0.23.0:
+    # https://github.com/buildpack/pack/releases/download/v0.23.0/pack-v0.23.0-linux.tgz
+    linux: sha256:d1278982cf4ec8ab2e1fb20348c756c527910eae1312774b5c681a33970375ee
+    # https://github.com/buildpack/pack/releases/download/v0.23.0/pack-v0.23.0-windows.zip
+    windows: sha256:5606de9c6d4f7ee0a02320d83bc5ded2798ed098e2867f95c8fb430fce2cd472
+    # https://github.com/buildpack/pack/releases/download/v0.23.0/pack-v0.23.0-macos.tgz
+    macos: sha256:08e67ff2968e83a7a21021243b78cd93cfd9c7129f9d7e4c843adad767b0fdee
+  v0.24.0:
+    # https://github.com/buildpack/pack/releases/download/v0.24.0/pack-v0.24.0-linux.tgz
+    linux: sha256:d868e358129dd9e48a56307a3f482731c2ff4103544a64b4388757874b6353ad
+    # https://github.com/buildpack/pack/releases/download/v0.24.0/pack-v0.24.0-windows.zip
+    windows: sha256:ed9845857e2cb23d67a717ab463083f409c4c90860b01f65065932ab79ddbeee
+    # https://github.com/buildpack/pack/releases/download/v0.24.0/pack-v0.24.0-macos.tgz
+    macos: sha256:ab81d21a15d86161e429e5eef00c37d6121ecc58235ebf22a7c6bba2fcd88b5e

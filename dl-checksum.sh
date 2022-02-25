@@ -13,7 +13,7 @@ dl()
     local lfile=$DIR/$file
     if [ ! -e $lfile ];
     then
-        wget -q -O $lfile $url
+        curl -sSLf -o $lfile $url
     fi
 
     printf "    # %s\n" $url
@@ -28,5 +28,4 @@ dl_ver() {
     dl $ver macos tgz
 }
 
-
-dl_ver ${1:-v0.20.0}
+dl_ver ${1:-v0.24.0}
