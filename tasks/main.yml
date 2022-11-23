@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
@@ -13,7 +15,7 @@
   become: true
   stat:
     path: '{{ pack_install_dir }}'
-  changed_when: False
+  changed_when: false
   register: pack_binary
 - when: not pack_binary.stat.exists
   block:

@@ -1,10 +1,12 @@
 ---
 # defaults file for pack
-pack_ver: v0.24.0
+pack_ver: v0.27.0
 pack_mirror: https://github.com/buildpack/pack/releases/download
 
-pack_os: linux
-pack_archivetype: tgz
+pack_os_map:
+  Linux: linux
+  Darwin: macos
+  Windows: windows
 
 pack_parent_install_dir: /usr/local
 
@@ -65,3 +67,10 @@ pack_checksums:
     windows: sha256:ed9845857e2cb23d67a717ab463083f409c4c90860b01f65065932ab79ddbeee
     # https://github.com/buildpack/pack/releases/download/v0.24.0/pack-v0.24.0-macos.tgz
     macos: sha256:ab81d21a15d86161e429e5eef00c37d6121ecc58235ebf22a7c6bba2fcd88b5e
+  v0.27.0:
+    # https://github.com/buildpack/pack/releases/download/v0.27.0/pack-v0.27.0-linux.tgz
+    linux: sha256:83179a25818a8ae33eabc0599f1c7f21fb405b3697bb0ff350a63d88c7522b15
+    # https://github.com/buildpack/pack/releases/download/v0.27.0/pack-v0.27.0-windows.zip
+    windows: sha256:f201e278a89e6087a2adfc488d9444c2355cb7488a232c15cdd9a3d2ee4e703f
+    # https://github.com/buildpack/pack/releases/download/v0.27.0/pack-v0.27.0-macos.tgz
+    macos: sha256:228efb3b10839782014617b7b6387275c0eefeee4461c1f20c444c22dcdee5b4

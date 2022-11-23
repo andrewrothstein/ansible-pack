@@ -28,4 +28,4 @@ dl_ver() {
     dl $ver macos tgz
 }
 
-dl_ver ${1:-v0.24.0}
+dl_ver ${1:-v0.27.0}
