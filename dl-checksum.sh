@@ -7,25 +7,29 @@ dl()
 {
     local ver=$1
     local os=$2
-    local archive_type=$3
-    local file=pack-${ver}-${os}.${archive_type}
-    local url=$MIRROR/$ver/$file
-    local lfile=$DIR/$file
-    if [ ! -e $lfile ];
+    local arch=$3
+    local archive_type=$4
+    local suffix="-${arch}"
+    if [ "${arch}" = "amd64" ];
     then
-        curl -sSLf -o $lfile $url
+        suffix=""
     fi
+    platform="${os}${suffix}"
+
+    local url=$MIRROR/$ver/pack-${ver}-${os}${suffix}.${archive_type}.sha256
 
     printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $os $(sha256sum $lfile | awk '{print $1}')
+    printf "    %s: sha256:%s\n" $platform $(curl -sSLf $url | awk '{ print $1 }')
 }
 
 dl_ver() {
     local ver=$1
     printf "  %s:\n" $ver
-    dl $ver linux tgz
-    dl $ver windows zip
-    dl $ver macos tgz
+    dl $ver linux amd64 tgz
+    dl $ver linux arm64 tgz
+    dl $ver windows amd64 zip
+    dl $ver macos amd64 tgz
+    dl $ver macos arm64 tgz
 }
 
-dl_ver ${1:-v0.27.0}
+dl_ver ${1:-v0.28.0}
