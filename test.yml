@@ -1,10 +1,10 @@
 ---
 - hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: pack --version
-    register: pack_test_output
-  - name: pack --version
-    debug:
-      msg: '{{ pack_test_output.stdout }}'
+    - command: pack --version
+      register: pack_test_output
+    - name: pack --version
+      debug:
+        msg: '{{ pack_test_output.stdout }}'
