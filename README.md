@@ -1,4 +1,4 @@
-<andrewrothstein.pack
+andrewrothstein.pack
 =========
 ![Build Status](https://github.com/andrewrothstein/ansible-pack/actions/workflows/build.yml/badge.svg)
 
