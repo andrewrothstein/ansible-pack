@@ -1,10 +1,6 @@
 ---
 # defaults file for pack
-<<<<<<< HEAD
-pack_ver: v0.30.0
-=======
 pack_ver: v0.31.0
->>>>>>> b5b4117 (pack:0.31.0)
 pack_mirror: https://github.com/buildpack/pack/releases/download
 
 pack_os_map:
