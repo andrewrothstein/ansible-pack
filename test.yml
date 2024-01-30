@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.pack
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: pack --version
+    - name: Executing 'pack --version'
+      ansible.builtin.command: pack --version
+      changed_when: false
       register: pack_test_output
-    - name: pack --version
-      debug:
+    - name: Output of 'pack --version'
+      ansible.builtin.debug:
         msg: '{{ pack_test_output.stdout }}'
