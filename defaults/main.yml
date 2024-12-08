@@ -1,6 +1,6 @@
 ---
 # defaults file for pack
-pack_ver: v0.35.1
+pack_ver: v0.36.0
 pack_mirror: https://github.com/buildpack/pack/releases/download
 
 pack_os_map:
@@ -195,3 +195,14 @@ pack_checksums:
     macos: sha256:70157f268386a2a21514ef27643865e512f49fb6c4954c73c4c754df4ba4c378
     # https://github.com/buildpack/pack/releases/download/v0.35.1/pack-v0.35.1-macos-arm64.tgz.sha256
     macos-arm64: sha256:2db604e60d50f0ceeaee1f6088640b96ad43cb8259d467c1136b02268b940570
+  v0.36.0:
+    # https://github.com/buildpack/pack/releases/download/v0.36.0/pack-v0.36.0-linux.tgz.sha256
+    linux: sha256:42324ccbf29a6c6a64533ffe547fb1bbc0b73d741c6b2b7bee5cb9ed2bbf40b2
+    # https://github.com/buildpack/pack/releases/download/v0.36.0/pack-v0.36.0-linux-arm64.tgz.sha256
+    linux-arm64: sha256:935e3ba3330a9a9cbb7ece748a61660376bbccaae2722c9cc55b7b011c106d7e
+    # https://github.com/buildpack/pack/releases/download/v0.36.0/pack-v0.36.0-windows.zip.sha256
+    windows: sha256:c475f1115b3fe6562b315e963b15b1269ce4fe1929eed45ae9149284e6903bcf
+    # https://github.com/buildpack/pack/releases/download/v0.36.0/pack-v0.36.0-macos.tgz.sha256
+    macos: sha256:2c641eb0ea7cf00ade912150c6ba1656b3e744e1783c99240562c60d23819fe0
+    # https://github.com/buildpack/pack/releases/download/v0.36.0/pack-v0.36.0-macos-arm64.tgz.sha256
+    macos-arm64: sha256:302903d6289c9080f9f6c419b993173ce7a8fe67a42b024c7439d0898eac54c8
