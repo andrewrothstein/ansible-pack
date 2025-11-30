@@ -32,4 +32,11 @@ dl_ver() {
     dl $ver macos arm64 tgz
 }
 
-dl_ver ${1:-v0.36.1}
+dl_ver v0.36.2
+dl_ver v0.36.3
+dl_ver v0.36.4
+dl_ver v0.37.0
+dl_ver v0.38.0
+dl_ver v0.38.1
+dl_ver v0.38.2
+dl_ver ${1:-v0.39.0}
