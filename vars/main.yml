@@ -1,7 +1,7 @@
 ---
 # vars file for pack
 pack_os: '{{ pack_os_map[ansible_facts["system"]] }}'
-pack_arch: '{{ ansible_architecture }}'
+pack_arch: '{{ ansible_facts["architecture"] }}'
 pack_platform: '{{ pack_os }}{% if pack_arch == "aarch64" %}-arm64{% endif %}'
 pack_archive: pack-{{ pack_ver }}-{{ pack_platform }}.{{ pack_archivetype | default("tgz") }}
 pack_tmp_archive: /tmp/{{ pack_archive }}
